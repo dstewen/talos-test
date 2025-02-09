@@ -42,13 +42,7 @@ nodes:
         mtu: 1500
         vip:
           ip: "192.168.10.252"
-    extensionServices:
-      - name: nut-client
-        configFiles:
-          - content: |-
-              MONITOR ups@192.168.10.23 1 upsmon_local mypassword secondary
-              SHUTDOWNCMD "/sbin/poweroff"
-            mountPath: /usr/local/etc/nut/upsmon.conf
+
 # Global patches
 patches:
   - "@./patches/global/machine-files.yaml"
